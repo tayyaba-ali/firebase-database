@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getDocs ,updateDoc,arrayUnion, arrayRemove  ,getFirestore,setDoc ,doc,collection, addDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import {where,limit,query,orderBy,serverTimestamp,onSnapshot ,getDoc , getDocs ,updateDoc,arrayUnion, arrayRemove  ,getFirestore,setDoc ,doc,collection, addDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -20,6 +20,11 @@ export{
     collection, addDoc,db
     ,doc
     ,getDocs ,
+    limit,
     updateDoc ,
-    arrayUnion, arrayRemove 
+    arrayUnion, arrayRemove ,serverTimestamp ,getDoc ,
+    onSnapshot,
+    query,orderBy,
+    where
+ 
 }
