@@ -115,10 +115,11 @@ const usersRef = collection(db, "users");
 const q = query(usersRef,where("age",">","18")) 
 
 const unsubscribe = onSnapshot(q, (querySnapshot) => {
+   console.count("calling");
   let userDiv = document.getElementById("userName");
   userDiv.innerHTML = "";
   querySnapshot.forEach((doc) => {
-    console.count("calling");
+   
 
     userDiv.innerHTML += `<p> ${doc.data().name}</p>`;
     console.log(doc.data().name);
